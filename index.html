@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="CoCoNut" />
+    <meta property="og:url" content="https://coconut-uva.github.io/" />
+    <meta property="og:site_name" content="coconut-uva.github.io" />
+        <style>
+        code {
+          display: block;
+          white-space: pre-wrap   
+        }
+        </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>CoCoNut </title>
+  </head>
+  <body>
+      <div class="jumbotron">
+          <div class="container-fluid" style="max-width: 1200px; margin: auto;">
+              <div class="row">
+                  <div class="col-md mr-md-5">
+                      <h1 class="display-4">CoCoNut</h1>
+                      <p class="lead">Compiler Construction in a Nutshell(CoCoNut) is a framework to ease the construction of compilers in C.
+                      By describing the common structure in a DSL, CoCoNut can generate the boilerplate and you can focus on the interestings parts
+                      of a compiler.
+                      </p>
+                      <hr class="my-4">
+                      <p> CoCoNut is based on Bachelor thesis projects at the University of Amsterdam </p>
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                  </div>
+                  <div class="col-md ml-md-5" style="whitespace: pre-wrap;">
+                      <h3 class="display-5"> DSL excerpt </h3>
+                    <code style="whitespace: pre-wrap;">
+start phase repl {
+    info = "Start point of the REPL",
+    actions {
+        pass scanParse;
+        eval;
+        print;
+    }
+};
+
+root node binop {
+    children {
+        expr left { constructor, mandatory },
+        expr right { constructor, mandatory }
+    },
+
+    attributes {
+        binop_type type { constructor }
+    }
+};
+                    </code>
+                  </div>
+          </div>
+      </div>
+
+      <div class="container mb-5">
+          <h3> CoCoNut: A New Dynamic Approach to Code Generation </h3>
+          <h5> <span> by </span> -- </h5>
+          <details>
+          <summary>
+              Abstract
+          </summary>
+          <p>
+             	Compilers are important to provide machine code readable to an arbitrary architecture. Creating compilers by hand can be a tedious task because of having to duplicate code of common code patterns. For this purpose, CoCoNut has been created. CoCoNut is a metacompiler framework built to provide an easier experience for building actual compilers. It provides the automatic generation of compiler passes and an intermediate representation according to a user specified domain specific language. According to this domain specific language an abstract syntax tree is generated. We research the implementation of a dynamically typed alternative to the already existing statically typed framework. We discuss the implementation details of both backends and discuss their differences. We research the differences between the two as well as the implementation details the dynamic backend allows to provide a more streamlined experience for the user. To validate the dynamic approach, we perform a qualitative and quantitative analysis on the dynamic backend and compare this to the static backend. From this analysis, we can conclude that the performance between the two backends is similar, but for larger scale trees, the dynamic backend is more efficient. 
+          </p>
+          </details>
+      </div>
+
+      <div class="container">
+          <h3> Memory leak Detection and Automatic Garbage Collection for the C-Based Compiler Framework CoCoNut </h3>
+          <h5> <span> by </span> -- </h5>
+          <details>
+          <summary>
+              Abstract
+          </summary>
+          <p>
+The CoCoNut framework is built to support the user in the development of their own C based compiler. It does this by providing an abstraction layer to interact with the Abstract syntax tree. However, if for some reason memory-leaks occur there are currently no means to identify or clean them automatically. In this thesis we expand the CoCoNut framework with the means to support a memory-leak detector for the set of data-objects which form the AST. This is done by creating a wrapper which will manage all the dynamically allocated data-objects with regards to the AST. Because the CoCoNut framework generates all the constructor and destructor functions of the nodes which are in the AST. The implementation and function of it can be hidden from the user. With this wrapper implemented and now possible to exert more control over the data-objects which form the AST. The operation of an automatic garbage collector or a memory-leak reporter is now made possible. With the automatic-garbage- collector and memory-leak-reporter implemented, the CoCoNut framework is now able to support the user in finding the causes of memory-leaks without having to exert effort. This helps the user in boosting their productivity in developing their compiler. 
+          </p>
+          </details>
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
