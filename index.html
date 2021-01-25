@@ -14,22 +14,22 @@
         </style>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>CoCoNut </title>
   </head>
   <body>
-      <div class="jumbotron">
+      <div class="jumbotron" style="background-color: white;">
           <div class="container-fluid" style="max-width: 1200px; margin: auto;">
               <div class="row">
                   <div class="col-md mr-md-5">
                       <h1 class="display-4">CoCoNut</h1>
                       <p class="lead">Compiler Construction in a Nutshell(CoCoNut) is a framework to ease the construction of compilers in C.
-                      By describing the common structure in a DSL, CoCoNut can generate the boilerplate and you can focus on the interestings parts
+                      By describing the common structure in a DSL, CoCoNut generates the boilerplate and you can focus on the interestings parts
                       of a compiler.
                       </p>
                       <hr class="my-4">
                       <p> CoCoNut is based on Bachelor thesis projects at the University of Amsterdam </p>
-                      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                      <a class="btn btn-primary btn-lg" href="#research" role="button">See theses</a>
                   </div>
                   <div class="col-md ml-md-5" style="whitespace: pre-wrap;">
                       <h3 class="display-5"> DSL excerpt </h3>
@@ -57,7 +57,9 @@ root node binop {
                   </div>
           </div>
       </div>
-
+        <section class="container mt-5" id="research"> 
+            <h1 class="h1 text-center"> Theses </h1>
+            <hr>
       <div class="container mb-5">
           <h3> CoCoNut: A New Dynamic Approach to Code Generation </h3>
           <h5> <span> by </span> -- </h5>
@@ -71,7 +73,7 @@ root node binop {
           </details>
       </div>
 
-      <div class="container">
+      <div class="container mb-5">
           <h3> Memory leak Detection and Automatic Garbage Collection for the C-Based Compiler Framework CoCoNut </h3>
           <h5> <span> by </span> -- </h5>
           <details>
@@ -83,6 +85,31 @@ The CoCoNut framework is built to support the user in the development of their o
           </p>
           </details>
       </div>
+      <div class="container mb-5">
+          <h3>  	CoCoNutMan: Configuration Management for CoCoNut - A novel DSL-based framework for defining, documenting, and parsing program configurations </h3>
+          <h5> <span> by </span> -- </h5>
+          <details>
+            <summary>
+                Abstract
+            </summary>
+            <p>
+             	Implementation of program flow for defining and interpreting configuration is often very similar and boilerplate-heavy. Doing so usually involves writing code which defines the configuration structure, parsing code for both the command line and configuration files, as well as documentation in the form of usage text and other documents like webpages. This is in particular an issue for compilers, which tend to have many options (e.g. GCC 8.0.3 has 717 architecture-independent options for pure C), and are nearly always offline tools without graphical configuration possibilities. A metacompiler framework in development for the UvA Compiler Construction (CoCo) course named CoCoNut (Compiler Construction in a Nutshell) presents an opportunity to develop and implement a better solution for configuration management. This thesis presents a unique configuration framework which makes use of a compiler for a domain-specific configuration definition language to simplify writing configuration code. Also presented is the domain-specific language (DSL) which supports and extends the GNU getopt command-line standard, as well as offering simple documentation, automatic parsing of options, consistency checking, and easy definition of common parsing patterns in a minimal language. Specifically, in this thesis are presented: the process of designing this language based on requirements of the CoCo course as well as an analysis of the GCC, Clang, OpenJDK javac, and Single-Assignment C (SAC) compilers; an overview of the DSL and surrounding framework; and an in-depth look at the framework design and logic.
+            </p>
+          </details>
+        </div>
+      <div class="container mb-5">
+          <h3> CoCoNut: A Phase Driver for a Compiler Construction Framework - Increasing Consistency and Agility, Reducing Boilerplate and Errors  </h3>
+          <h5> <span> by </span> -- </h5>
+          <details>
+            <summary>
+                Abstract
+            </summary>
+            <p>
+             	In the age of computing, compilers are crucial. Compilers enable higher level languages, which provide an abstraction layer to programmers. The abstraction layer provides an increase in productivity and decrease of errors. However, compilers are complex pieces of software but share a common structure. This structure can be utilised by a framework to provide an abstraction layer. One aspect of such a framework is the phase driver. The phase driver is responsible for the construction, execution and management of the common structure. We manage to design a domain specific language (DSL) to describe the common structure expressively and abstractly. Also, we have designed an expressive and flexible abstraction for fixed point detection that reduces errors. Additionally debugging and profiling tools are integrated, bridging the gap to more specialised tools. From the description in the DSL a significant amount of user code is generated. The generated code reduces boilerplate and errors, while increasing consistency. While the current implementation can be used to construct compilers it is not possible to integrate libraries that change the common structure of the compiler. The implementation has no support for dynamically changing the common structure or using passes or phases defined in a library. Still, this implementation can be used when it is not required to integrate libraries, as it provides an effective level of abstraction.
+            </p>
+          </details>
+        </div>
+      </section>
 
 
     <!-- Optional JavaScript -->
